@@ -3,7 +3,9 @@ const Schema = mongoose.Schema;
 
 const Project = new Schema({
     Name : String,
-    Url: String
+    Url: String,
+    Link: String,
+    GitLink: String
 });
 
 const ProjectSchema = mongoose.model('Project', Project);

@@ -21,7 +21,9 @@ Router.get('/show', projectController.Show);
 Router.post('/create', upload.fields([{name: 'Url', maxCount: 1}]) , (req,res) => {
     const Project = new ProjectSchema({
         Name : req.body.Name,
-        Url : req.files['Url'][0].path
+        Url : req.files['Url'][0].path,
+        Link : req.body.Link,
+        GitLink : req.body.GitLink
     });
 
     Project.save().then(result=>{

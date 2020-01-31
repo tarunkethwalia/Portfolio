@@ -1,0 +1,5 @@
+{
+  "env": {
+    "MongoUrl": "mongodb+srv://portfolio:portfolio1234@portfolio-ucooc.mongodb.net/portfolio?retryWrites=true&w=majority"
+  }
+}

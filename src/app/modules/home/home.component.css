@@ -1,0 +1,91 @@
+/*Wrapper*/
+#content {
+  display: grid; grid-template-columns: repeat(14, 1fr); grid-auto-rows: minmax(32vh, auto);
+  grid-template-areas:
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". block1 block1 block1 block1 block1 block1 block1 block1 block1 block1 block1 block1 ."
+    ". block2 block2 block2 block2 block2 block2 block2 block2 block2 block2 block2 block2 ."
+    ". block2 block2 block2 block2 block2 block2 block2 block2 block2 block2 block2 block2 .";
+  margin: 0 auto; max-width: 100%; }
+
+.block1 { grid-area: block1; position: fixed; width: 100%; display: flex; height: 100%;}
+.block2 { grid-area: block2; transform: translateY(-30px);}
+
+@media (max-width: 990px){
+  #content { display: grid; grid-template-columns: repeat(10, 1fr); grid-auto-rows: minmax(40px, auto);
+    grid-template-areas:
+      "block1 block1 block1 block1 block1 block1 block1 block1 block1 block1"
+      ". block2 block2 block2 block2 block2 block2 block2 block2 ."
+      ". block2 block2 block2 block2 block2 block2 block2 block2 .";
+    margin: 0 auto; max-width: 100%; }
+
+  .block1 { grid-area: block1; position: relative;}
+  .block2 { grid-area: block2; }
+}
+
+/*Mat Card Part*/
+.back-sky {
+  background-image: linear-gradient(to bottom right,#40c4ff,#0094cc); display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "blc1 blc1 blc1 blc2 blc2 blc2";
+  width: 90%;
+  margin: auto;
+  height: 90%;
+}
+
+.blc1 { grid-area: blc1; width: 100%; height: 100%; }
+.blc2 { grid-area: blc2; display: grid; place-items: center; }
+
+@media (max-width: 990px) {
+  .back-sky {
+    background-image: linear-gradient(to bottom right, #40c4ff, #0094cc); display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: "blc1 blc1 blc1"; width: 100%; margin: 0; height: 100%;}
+
+  .blc1 { grid-area: blc1; }
+  .blc2 { grid-area: blc2; display: none; }
+}
+
+/*BLC1*/
+.min-block { height: 20%; width: 100%; padding: 15px; }
+.min-1 {display: flex; align-items: center;}
+.min-1 .fa-paw {font-size: 60px; border-bottom: 5px solid black; padding: 10px;}
+.min-2 {display: flex; align-items: center;}
+.min-2 h1 {font-size: 60px; font-weight: bolder; font-family: 'Raleway', sans-serif;}
+.min-3 {display: flex; align-items: center;}
+.min-3 p {font-size: 18px; font-weight: 500;}
+.min-4 {display: flex; justify-content: space-evenly;}
+.min-4 button {height: 60px; background-color: #0094cc; transition: .4s;}
+.min-4 button:hover { background-color: #40c4ff; transition: .4s;}
+.min-4 button:hover .fab, .min-4 button:hover .fas { color: #0094cc; transition: .4s;}
+.min-4 button:nth-child(1), button:nth-child(2), button:nth-child(3) {border-radius: 50%; }
+.min-5 {display: flex; justify-content: center; padding-bottom: 40px;}
+.min-5 button {color: #40c4ff; background-color: #0094cc; transition: .4s; padding: 5px 20px;}
+.min-5 button:hover {background-color: #40c4ff; color: #0094cc; transition: .4s;}
+.min-5 button h4 {font-weight: bold;}
+.fa-envelope, .fa-linkedin-in, .fa-github {font-size: 32px; color: #40c4ff;}
+
+/*Front Data*/
+.front-data { width: 100%; height: 100%; display: flex; padding: 0; background-image: linear-gradient(to bottom right, #40c4ff, #0094cc); }
+.data-left { width: 40%; border-top-left-radius: 5px; border-bottom-left-radius: 5px;}
+.Info {padding: 40px; color: #ffffff; background-color: #333333; }
+.Info h2 { padding-bottom: 10px; font-family: 'Raleway', sans-serif; color: #40c4ff;}
+.Info p { line-height: 30px; }
+.Process { padding: 40px; background-color: #ffffff;}
+.Process h2 { padding-bottom: 10px; font-family: 'Raleway', sans-serif; color: #0094cc;}
+.Process p { line-height: 30px; }
+.Qualification { padding: 40px; color: #ffffff; background-color: #333333; }
+.Qualification h2 { padding-bottom: 10px; font-family: 'Raleway', sans-serif; color: #40c4ff;}
+.Qualification p { line-height: 30px;}
+.data-right { width: 60%; border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+.Projects {width: 100%; height: 400px; color: #333333; background-color: white; border: 2px solid #333333;}
+.Projects img {width: 100%; height: 340px;}
+.Projects .proDiv {display: flex; justify-content: center;}
+/*Change from Here*/
+
+
+@media (max-width: 990px) {
+  .front-data { width: 100%; height: 100%; flex-direction: column; }
+  .data-left { width: 100%; }
+  .data-right { width: 100%; }
+}

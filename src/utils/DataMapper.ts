@@ -7,7 +7,9 @@ export function DataMapper(data) {
     const row = {
       _id: x._id,
       Name: x.Name,
-      Url: x.Url
+      Url: x.Url,
+      Link: x.Link,
+      GitLink: x.GitLink
     };
     TableField.push(row);
   });

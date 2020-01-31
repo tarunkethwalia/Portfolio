@@ -11,12 +11,12 @@ import {DataMapper} from '../../../utils/DataMapper';
 export class HomeComponent implements OnInit {
 
   projects: any[];
-  ImgUrl = 'http://localhost:3000/';
+  ImgUrl = 'https://tarun-portfolio-api.herokuapp.com/';
+  // ImgUrl = 'http://localhost:4200/';
 
   constructor(private getProjects: ProjectsService) {
     this.getProjects.GetProjects().subscribe(data => {
       this.projects = DataMapper(data);
-      console.log(this.projects);
     }, error => {
       console.log(error);
     });

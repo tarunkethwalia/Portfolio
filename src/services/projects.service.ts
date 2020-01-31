@@ -10,7 +10,8 @@ export class ProjectsService {
 
   constructor(private http: HttpClient) { }
 
-  ProjectUrl = 'http://localhost:3000/api/projects/show';
+  ProjectUrl = 'https://tarun-portfolio-api.herokuapp.com/api/projects/show';
+  // ProjectUrl = 'http://localhost:4200//api/projects/show';
 
   GetProjects(): Observable<ProjectModel> {
     return this.http.get<ProjectModel>(`${this.ProjectUrl}`);

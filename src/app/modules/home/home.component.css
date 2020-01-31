@@ -63,24 +63,31 @@
 .min-5 button {color: #40c4ff; background-color: #0094cc; transition: .4s; padding: 5px 20px;}
 .min-5 button:hover {background-color: #40c4ff; color: #0094cc; transition: .4s;}
 .min-5 button h4 {font-weight: bold;}
-.fa-envelope, .fa-linkedin-in, .fa-github {font-size: 32px; color: #40c4ff;}
+.min-4 .fa-envelope, .min-4 .fa-linkedin-in, .min-4 .fa-github {font-size: 32px; color: #40c4ff;}
 
 /*Front Data*/
 .front-data { width: 100%; height: 100%; display: flex; padding: 0; background-image: linear-gradient(to bottom right, #40c4ff, #0094cc); }
-.data-left { width: 40%; border-top-left-radius: 5px; border-bottom-left-radius: 5px;}
-.Info {padding: 40px; color: #ffffff; background-color: #333333; }
+.data-left { width: 40%; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-right: 1px solid white;}
+.Info {padding: 40px; color: #ffffff; background-color: #131419; }
 .Info h2 { padding-bottom: 10px; font-family: 'Raleway', sans-serif; color: #40c4ff;}
 .Info p { line-height: 30px; }
 .Process { padding: 40px; background-color: #ffffff;}
 .Process h2 { padding-bottom: 10px; font-family: 'Raleway', sans-serif; color: #0094cc;}
 .Process p { line-height: 30px; }
-.Qualification { padding: 40px; color: #ffffff; background-color: #333333; }
+.Qualification { padding: 40px; color: #ffffff; background-color: #131419; }
 .Qualification h2 { padding-bottom: 10px; font-family: 'Raleway', sans-serif; color: #40c4ff;}
 .Qualification p { line-height: 30px;}
 .data-right { width: 60%; border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
-.Projects {width: 100%; height: 400px; color: #333333; background-color: white; border: 2px solid #333333;}
+.projectTitle {position: absolute; background-image: linear-gradient(to bottom right, #40c4ff, #0094cc); left: 50%; transform: translateY(-20px); padding: 8px 15px; font-family: 'Raleway', sans-serif; box-shadow: -5px -5px 10px rgba(255,255,255,0.05),
+5px 5px 15px rgba(0,0,0,0.5); font-size: 26px; border-radius: 2px;}
+.Projects {width: 100%; height: 420px; color: #333333; background: #131419;}
 .Projects img {width: 100%; height: 340px;}
-.Projects .proDiv {display: flex; justify-content: center;}
+.Projects .proDiv {display: flex; justify-content: center; align-items: center; height: 80px; color: white;}
+.proDiv h4 { padding: 8px 12px; margin: 0 10px; color: #40c4ff; font-family: 'Raleway', sans-serif;}
+.proDiv button {margin: 0 10px; padding: 10px; box-shadow: -5px -5px 10px rgba(255,255,255,0.05),
+                                                            5px 5px 15px rgba(0,0,0,0.5); font-size: 26px;}
+.proDiv button:hover {box-shadow: inset -2px -2px 6px rgba(255,255,255,0.1),
+inset 2px 2px 6px rgba(0,0,0,0.8);}
 /*Change from Here*/
 
 
@@ -88,4 +95,11 @@
   .front-data { width: 100%; height: 100%; flex-direction: column; }
   .data-left { width: 100%; }
   .data-right { width: 100%; }
+  .Projects {width: 100%; height: 220px; color: #333333; background: #131419;}
+  .Projects img {width: 100%; height: 160px;}
+  .Projects .proDiv {display: flex; justify-content: center; align-items: center; height: 60px; color: white;}
+  .proDiv h4 { padding: 4px 8px; margin: 0 10px; color: #40c4ff; font-family: 'Raleway', sans-serif; font-size: 16px;}
+  .proDiv button { padding: 5px;}
+  .projectTitle { padding: 5px 10px; left: 15%;}
+  .projectTitle h2 { font-size: 20px;}
 }

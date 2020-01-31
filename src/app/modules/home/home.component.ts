@@ -8,11 +8,8 @@ import {DataMapper} from '../../../utils/DataMapper';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
 
-  projects: any[];
-  ImgUrl = 'https://tarun-portfolio-api.herokuapp.com/';
-  // ImgUrl = 'http://localhost:4200/';
+export class HomeComponent implements OnInit {
 
   constructor(private getProjects: ProjectsService) {
     this.getProjects.GetProjects().subscribe(data => {
@@ -22,7 +19,11 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  projects: any[];
+  ImgUrl = 'https://tarun-portfolio-api.herokuapp.com/';
+  // ImgUrl = 'http://localhost:4200/';
+
+ngOnInit() {
   }
 
 }

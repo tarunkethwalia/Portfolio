@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ProjectsService} from '../../../services/projects.service';
 import {ProjectModel} from '../../../models/projects';
 import {DataMapper} from '../../../utils/DataMapper';
+import {wavify} from 'wavify';
 
 @Component({
   selector: 'app-home',
